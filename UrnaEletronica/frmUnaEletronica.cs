@@ -1,8 +1,8 @@
 namespace UrnaEletronica
 {
-    public partial class Form1 : Form
+    public partial class frmUnaEletronica : Form
     {
-        public Form1()
+        public frmUnaEletronica()
         {
             InitializeComponent();
         }
