@@ -28,8 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUnaEletronica));
             panel1 = new Panel();
+            lbl_relogio = new Label();
+            panelLinha = new Panel();
+            panel3 = new Panel();
+            label11 = new Label();
+            label9 = new Label();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
+            lbl_votou = new Label();
+            picCandidato = new PictureBox();
+            lblVotPara = new Label();
+            lbl_Votacao = new Label();
+            lbl_corrige = new Label();
+            lbl_confirma = new Label();
+            lbl_aperte_a_tecla = new Label();
+            lblPartido = new Label();
+            lbl_Partido = new Label();
+            lblCandidato = new Label();
+            lbl_nome = new Label();
+            lbl_numero = new Label();
+            lbl_SeuVotoPara = new Label();
+            lbl_num5 = new Label();
+            lbl_num4 = new Label();
+            lbl_num3 = new Label();
+            lbl_num2 = new Label();
+            lbl_num1 = new Label();
             panel2 = new Panel();
             button9 = new Button();
             button7 = new Button();
@@ -45,6 +74,10 @@
             button2 = new Button();
             button1 = new Button();
             pictureBox1 = new PictureBox();
+            timer1 = new System.Windows.Forms.Timer(components);
+            panel1.SuspendLayout();
+            panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)picCandidato).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -52,10 +85,319 @@
             // panel1
             // 
             panel1.BackColor = Color.White;
-            panel1.Location = new Point(31, 43);
+            panel1.Controls.Add(lbl_relogio);
+            panel1.Controls.Add(panelLinha);
+            panel1.Controls.Add(panel3);
+            panel1.Controls.Add(lbl_votou);
+            panel1.Controls.Add(picCandidato);
+            panel1.Controls.Add(lblVotPara);
+            panel1.Controls.Add(lbl_Votacao);
+            panel1.Controls.Add(lbl_corrige);
+            panel1.Controls.Add(lbl_confirma);
+            panel1.Controls.Add(lbl_aperte_a_tecla);
+            panel1.Controls.Add(lblPartido);
+            panel1.Controls.Add(lbl_Partido);
+            panel1.Controls.Add(lblCandidato);
+            panel1.Controls.Add(lbl_nome);
+            panel1.Controls.Add(lbl_numero);
+            panel1.Controls.Add(lbl_SeuVotoPara);
+            panel1.Controls.Add(lbl_num5);
+            panel1.Controls.Add(lbl_num4);
+            panel1.Controls.Add(lbl_num3);
+            panel1.Controls.Add(lbl_num2);
+            panel1.Controls.Add(lbl_num1);
+            panel1.Location = new Point(25, 39);
             panel1.Name = "panel1";
-            panel1.Size = new Size(576, 398);
+            panel1.Size = new Size(576, 422);
             panel1.TabIndex = 0;
+            panel1.Paint += panel1_Paint;
+            // 
+            // lbl_relogio
+            // 
+            lbl_relogio.AutoSize = true;
+            lbl_relogio.Location = new Point(9, 9);
+            lbl_relogio.Name = "lbl_relogio";
+            lbl_relogio.Size = new Size(138, 15);
+            lbl_relogio.TabIndex = 22;
+            lbl_relogio.Text = "QUA 09/04/2025 21:44:10";
+            // 
+            // panelLinha
+            // 
+            panelLinha.BackColor = Color.Black;
+            panelLinha.Location = new Point(0, 321);
+            panelLinha.Name = "panelLinha";
+            panelLinha.Size = new Size(576, 2);
+            panelLinha.TabIndex = 21;
+            // 
+            // panel3
+            // 
+            panel3.BackColor = Color.FromArgb(219, 226, 239);
+            panel3.Controls.Add(label11);
+            panel3.Controls.Add(label9);
+            panel3.Controls.Add(label5);
+            panel3.Controls.Add(label4);
+            panel3.Controls.Add(label3);
+            panel3.Controls.Add(label2);
+            panel3.Controls.Add(label1);
+            panel3.Location = new Point(0, 394);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(576, 28);
+            panel3.TabIndex = 20;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Arial Narrow", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label11.Location = new Point(450, 5);
+            label11.Name = "label11";
+            label11.Size = new Size(37, 20);
+            label11.TabIndex = 6;
+            label11.Text = "9999";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Arial Narrow", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label9.Location = new Point(407, 5);
+            label9.Name = "label9";
+            label9.Size = new Size(48, 20);
+            label9.TabIndex = 5;
+            label9.Text = "Seção:";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Arial Narrow", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Location = new Point(353, 5);
+            label5.Name = "label5";
+            label5.Size = new Size(37, 20);
+            label5.TabIndex = 4;
+            label5.Text = "9999";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Arial Narrow", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Location = new Point(317, 5);
+            label4.Name = "label4";
+            label4.Size = new Size(41, 20);
+            label4.TabIndex = 3;
+            label4.Text = "Zona:";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Arial Narrow", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(215, 5);
+            label3.Name = "label3";
+            label3.Size = new Size(87, 20);
+            label3.TabIndex = 2;
+            label3.Text = "Minha Cidade";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Arial Narrow", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(156, 5);
+            label2.Name = "label2";
+            label2.Size = new Size(44, 20);
+            label2.TabIndex = 1;
+            label2.Text = "99999";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Arial Narrow", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(89, 5);
+            label1.Name = "label1";
+            label1.Size = new Size(67, 20);
+            label1.TabIndex = 0;
+            label1.Text = "Município:";
+            // 
+            // lbl_votou
+            // 
+            lbl_votou.AutoSize = true;
+            lbl_votou.Font = new Font("Arial Narrow", 26.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_votou.ForeColor = Color.FromArgb(185, 188, 193);
+            lbl_votou.Location = new Point(453, 349);
+            lbl_votou.Name = "lbl_votou";
+            lbl_votou.Size = new Size(120, 42);
+            lbl_votou.TabIndex = 19;
+            lbl_votou.Text = "VOTOU";
+            // 
+            // picCandidato
+            // 
+            picCandidato.Location = new Point(365, 82);
+            picCandidato.Name = "picCandidato";
+            picCandidato.Size = new Size(187, 205);
+            picCandidato.TabIndex = 16;
+            picCandidato.TabStop = false;
+            // 
+            // lblVotPara
+            // 
+            lblVotPara.AutoSize = true;
+            lblVotPara.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            lblVotPara.Location = new Point(156, 63);
+            lblVotPara.Name = "lblVotPara";
+            lblVotPara.Size = new Size(149, 29);
+            lblVotPara.TabIndex = 15;
+            lblVotPara.Text = "Gorvenador";
+            // 
+            // lbl_Votacao
+            // 
+            lbl_Votacao.AutoSize = true;
+            lbl_Votacao.Font = new Font("Arial", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_Votacao.ForeColor = Color.FromArgb(185, 188, 193);
+            lbl_Votacao.Location = new Point(245, 9);
+            lbl_Votacao.Name = "lbl_Votacao";
+            lbl_Votacao.Size = new Size(111, 24);
+            lbl_Votacao.TabIndex = 14;
+            lbl_Votacao.Text = "VOTAÇÃO";
+            // 
+            // lbl_corrige
+            // 
+            lbl_corrige.AutoSize = true;
+            lbl_corrige.Font = new Font("Arial", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_corrige.Location = new Point(45, 371);
+            lbl_corrige.Name = "lbl_corrige";
+            lbl_corrige.Size = new Size(248, 17);
+            lbl_corrige.TabIndex = 13;
+            lbl_corrige.Text = "CORRIGE para REINICIAR este voto";
+            // 
+            // lbl_confirma
+            // 
+            lbl_confirma.AutoSize = true;
+            lbl_confirma.Font = new Font("Arial", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_confirma.Location = new Point(35, 349);
+            lbl_confirma.Name = "lbl_confirma";
+            lbl_confirma.Size = new Size(270, 17);
+            lbl_confirma.TabIndex = 12;
+            lbl_confirma.Text = "CONFIRMA para CONFIRMAR este voto";
+            // 
+            // lbl_aperte_a_tecla
+            // 
+            lbl_aperte_a_tecla.AutoSize = true;
+            lbl_aperte_a_tecla.Font = new Font("Arial", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_aperte_a_tecla.Location = new Point(12, 327);
+            lbl_aperte_a_tecla.Name = "lbl_aperte_a_tecla";
+            lbl_aperte_a_tecla.Size = new Size(101, 17);
+            lbl_aperte_a_tecla.TabIndex = 11;
+            lbl_aperte_a_tecla.Text = "Aperte a tecla:";
+            // 
+            // lblPartido
+            // 
+            lblPartido.AutoSize = true;
+            lblPartido.Font = new Font("Arial", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            lblPartido.Location = new Point(82, 244);
+            lblPartido.Name = "lblPartido";
+            lblPartido.Size = new Size(78, 17);
+            lblPartido.TabIndex = 10;
+            lblPartido.Text = "Presidente";
+            // 
+            // lbl_Partido
+            // 
+            lbl_Partido.AutoSize = true;
+            lbl_Partido.Font = new Font("Arial", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_Partido.Location = new Point(9, 244);
+            lbl_Partido.Name = "lbl_Partido";
+            lbl_Partido.Size = new Size(62, 17);
+            lbl_Partido.TabIndex = 9;
+            lbl_Partido.Text = "Partido: ";
+            // 
+            // lblCandidato
+            // 
+            lblCandidato.AutoSize = true;
+            lblCandidato.Font = new Font("Arial", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            lblCandidato.Location = new Point(82, 184);
+            lblCandidato.Name = "lblCandidato";
+            lblCandidato.Size = new Size(78, 17);
+            lblCandidato.TabIndex = 8;
+            lblCandidato.Text = "Presidente";
+            // 
+            // lbl_nome
+            // 
+            lbl_nome.AutoSize = true;
+            lbl_nome.Font = new Font("Arial", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_nome.Location = new Point(9, 184);
+            lbl_nome.Name = "lbl_nome";
+            lbl_nome.Size = new Size(55, 17);
+            lbl_nome.TabIndex = 7;
+            lbl_nome.Text = "Nome: ";
+            // 
+            // lbl_numero
+            // 
+            lbl_numero.AutoSize = true;
+            lbl_numero.Font = new Font("Arial", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_numero.Location = new Point(9, 138);
+            lbl_numero.Name = "lbl_numero";
+            lbl_numero.Size = new Size(68, 17);
+            lbl_numero.TabIndex = 6;
+            lbl_numero.Text = "Número: ";
+            // 
+            // lbl_SeuVotoPara
+            // 
+            lbl_SeuVotoPara.AutoSize = true;
+            lbl_SeuVotoPara.Font = new Font("Arial Narrow", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_SeuVotoPara.Location = new Point(9, 32);
+            lbl_SeuVotoPara.Name = "lbl_SeuVotoPara";
+            lbl_SeuVotoPara.Size = new Size(134, 23);
+            lbl_SeuVotoPara.TabIndex = 5;
+            lbl_SeuVotoPara.Text = "SEU VOTO PARA";
+            // 
+            // lbl_num5
+            // 
+            lbl_num5.AutoSize = true;
+            lbl_num5.BorderStyle = BorderStyle.FixedSingle;
+            lbl_num5.Font = new Font("Arial", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_num5.Location = new Point(230, 128);
+            lbl_num5.Name = "lbl_num5";
+            lbl_num5.Size = new Size(31, 34);
+            lbl_num5.TabIndex = 4;
+            lbl_num5.Text = "5";
+            // 
+            // lbl_num4
+            // 
+            lbl_num4.AutoSize = true;
+            lbl_num4.BorderStyle = BorderStyle.FixedSingle;
+            lbl_num4.Font = new Font("Arial", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_num4.Location = new Point(193, 128);
+            lbl_num4.Name = "lbl_num4";
+            lbl_num4.Size = new Size(31, 34);
+            lbl_num4.TabIndex = 3;
+            lbl_num4.Text = "4";
+            // 
+            // lbl_num3
+            // 
+            lbl_num3.AutoSize = true;
+            lbl_num3.BorderStyle = BorderStyle.FixedSingle;
+            lbl_num3.Font = new Font("Arial", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_num3.Location = new Point(156, 128);
+            lbl_num3.Name = "lbl_num3";
+            lbl_num3.Size = new Size(31, 34);
+            lbl_num3.TabIndex = 2;
+            lbl_num3.Text = "3";
+            // 
+            // lbl_num2
+            // 
+            lbl_num2.AutoSize = true;
+            lbl_num2.BorderStyle = BorderStyle.FixedSingle;
+            lbl_num2.Font = new Font("Arial", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_num2.Location = new Point(119, 128);
+            lbl_num2.Name = "lbl_num2";
+            lbl_num2.Size = new Size(31, 34);
+            lbl_num2.TabIndex = 1;
+            lbl_num2.Text = "2";
+            // 
+            // lbl_num1
+            // 
+            lbl_num1.AutoSize = true;
+            lbl_num1.BorderStyle = BorderStyle.FixedSingle;
+            lbl_num1.Font = new Font("Arial", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_num1.Location = new Point(82, 128);
+            lbl_num1.Name = "lbl_num1";
+            lbl_num1.Size = new Size(31, 34);
+            lbl_num1.TabIndex = 0;
+            lbl_num1.Text = "1";
             // 
             // panel2
             // 
@@ -280,6 +622,11 @@
             Controls.Add(panel1);
             Name = "frmUnaEletronica";
             Text = "Form1";
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)picCandidato).EndInit();
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
@@ -303,5 +650,34 @@
         private Button button5;
         private Button button3;
         private Button button14;
+        private Label lbl_num1;
+        private Label lbl_SeuVotoPara;
+        private Label lbl_num5;
+        private Label lbl_num4;
+        private Label lbl_num3;
+        private Label lbl_num2;
+        private Label lblPartido;
+        private Label lbl_Partido;
+        private Label lblCandidato;
+        private Label lbl_nome;
+        private Label lbl_numero;
+        private Label lbl_Votacao;
+        private Label lbl_corrige;
+        private Label lbl_confirma;
+        private Label lbl_aperte_a_tecla;
+        private Label lblVotPara;
+        private PictureBox picCandidato;
+        private Label lbl_votou;
+        private Label lbl_relogio;
+        private System.Windows.Forms.Timer timer1;
+        private Panel panel3;
+        private Label label11;
+        private Label label9;
+        private Label label5;
+        private Label label4;
+        private Label label3;
+        private Label label2;
+        private Label label1;
+        private Panel panelLinha;
     }
 }
