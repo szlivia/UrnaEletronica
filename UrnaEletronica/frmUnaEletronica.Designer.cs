@@ -31,16 +31,19 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUnaEletronica));
             panel1 = new Panel();
+            lbl_voto_nulo = new Label();
+            lbl_numero_errado = new Label();
+            lbl_FIM = new Label();
             lbl_relogio = new Label();
             panelLinha = new Panel();
             panel3 = new Panel();
-            label11 = new Label();
-            label9 = new Label();
-            label5 = new Label();
-            label4 = new Label();
-            label3 = new Label();
-            label2 = new Label();
-            label1 = new Label();
+            lbl_dig_secao = new Label();
+            lbl_secao = new Label();
+            lbl_dig_zona = new Label();
+            lbl_zona = new Label();
+            lbl_minha_cidade = new Label();
+            lbl_dig_municipio = new Label();
+            lbl_Municipio = new Label();
             lbl_votou = new Label();
             picCandidato = new PictureBox();
             lblVotPara = new Label();
@@ -48,7 +51,7 @@
             lbl_corrige = new Label();
             lbl_confirma = new Label();
             lbl_aperte_a_tecla = new Label();
-            lblPartido = new Label();
+            lblPartidoCandidato = new Label();
             lbl_Partido = new Label();
             lblCandidato = new Label();
             lbl_nome = new Label();
@@ -60,19 +63,19 @@
             lbl_num2 = new Label();
             lbl_num1 = new Label();
             panel2 = new Panel();
-            button9 = new Button();
-            button7 = new Button();
-            button8 = new Button();
-            button6 = new Button();
-            button4 = new Button();
-            button5 = new Button();
-            button3 = new Button();
-            button14 = new Button();
-            button13 = new Button();
-            button12 = new Button();
-            button11 = new Button();
-            button2 = new Button();
-            button1 = new Button();
+            btn10 = new Button();
+            btn9 = new Button();
+            btn8 = new Button();
+            btn7 = new Button();
+            btn6 = new Button();
+            btn5 = new Button();
+            btn4 = new Button();
+            btn3 = new Button();
+            btn_Confirma = new Button();
+            btn_Corrige = new Button();
+            btn_Branco = new Button();
+            btn2 = new Button();
+            btn1 = new Button();
             pictureBox1 = new PictureBox();
             timer1 = new System.Windows.Forms.Timer(components);
             panel1.SuspendLayout();
@@ -85,6 +88,9 @@
             // panel1
             // 
             panel1.BackColor = Color.White;
+            panel1.Controls.Add(lbl_voto_nulo);
+            panel1.Controls.Add(lbl_numero_errado);
+            panel1.Controls.Add(lbl_FIM);
             panel1.Controls.Add(lbl_relogio);
             panel1.Controls.Add(panelLinha);
             panel1.Controls.Add(panel3);
@@ -95,7 +101,7 @@
             panel1.Controls.Add(lbl_corrige);
             panel1.Controls.Add(lbl_confirma);
             panel1.Controls.Add(lbl_aperte_a_tecla);
-            panel1.Controls.Add(lblPartido);
+            panel1.Controls.Add(lblPartidoCandidato);
             panel1.Controls.Add(lbl_Partido);
             panel1.Controls.Add(lblCandidato);
             panel1.Controls.Add(lbl_nome);
@@ -110,12 +116,41 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(576, 422);
             panel1.TabIndex = 0;
-            panel1.Paint += panel1_Paint;
+            // 
+            // lbl_voto_nulo
+            // 
+            lbl_voto_nulo.AutoSize = true;
+            lbl_voto_nulo.Font = new Font("Arial", 21.75F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_voto_nulo.Location = new Point(193, 254);
+            lbl_voto_nulo.Name = "lbl_voto_nulo";
+            lbl_voto_nulo.Size = new Size(187, 33);
+            lbl_voto_nulo.TabIndex = 25;
+            lbl_voto_nulo.Text = "VOTO NULO";
+            // 
+            // lbl_numero_errado
+            // 
+            lbl_numero_errado.AutoSize = true;
+            lbl_numero_errado.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_numero_errado.Location = new Point(9, 222);
+            lbl_numero_errado.Name = "lbl_numero_errado";
+            lbl_numero_errado.Size = new Size(181, 22);
+            lbl_numero_errado.TabIndex = 24;
+            lbl_numero_errado.Text = "NÚMERO ERRADO";
+            // 
+            // lbl_FIM
+            // 
+            lbl_FIM.AutoSize = true;
+            lbl_FIM.Font = new Font("Arial", 72F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_FIM.Location = new Point(189, 116);
+            lbl_FIM.Name = "lbl_FIM";
+            lbl_FIM.Size = new Size(212, 111);
+            lbl_FIM.TabIndex = 23;
+            lbl_FIM.Text = "FIM";
             // 
             // lbl_relogio
             // 
             lbl_relogio.AutoSize = true;
-            lbl_relogio.Location = new Point(9, 9);
+            lbl_relogio.Location = new Point(12, 9);
             lbl_relogio.Name = "lbl_relogio";
             lbl_relogio.Size = new Size(138, 15);
             lbl_relogio.TabIndex = 22;
@@ -132,87 +167,87 @@
             // panel3
             // 
             panel3.BackColor = Color.FromArgb(219, 226, 239);
-            panel3.Controls.Add(label11);
-            panel3.Controls.Add(label9);
-            panel3.Controls.Add(label5);
-            panel3.Controls.Add(label4);
-            panel3.Controls.Add(label3);
-            panel3.Controls.Add(label2);
-            panel3.Controls.Add(label1);
+            panel3.Controls.Add(lbl_dig_secao);
+            panel3.Controls.Add(lbl_secao);
+            panel3.Controls.Add(lbl_dig_zona);
+            panel3.Controls.Add(lbl_zona);
+            panel3.Controls.Add(lbl_minha_cidade);
+            panel3.Controls.Add(lbl_dig_municipio);
+            panel3.Controls.Add(lbl_Municipio);
             panel3.Location = new Point(0, 394);
             panel3.Name = "panel3";
             panel3.Size = new Size(576, 28);
             panel3.TabIndex = 20;
             // 
-            // label11
+            // lbl_dig_secao
             // 
-            label11.AutoSize = true;
-            label11.Font = new Font("Arial Narrow", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label11.Location = new Point(450, 5);
-            label11.Name = "label11";
-            label11.Size = new Size(37, 20);
-            label11.TabIndex = 6;
-            label11.Text = "9999";
+            lbl_dig_secao.AutoSize = true;
+            lbl_dig_secao.Font = new Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_dig_secao.Location = new Point(467, 5);
+            lbl_dig_secao.Name = "lbl_dig_secao";
+            lbl_dig_secao.Size = new Size(40, 17);
+            lbl_dig_secao.TabIndex = 6;
+            lbl_dig_secao.Text = "9999";
             // 
-            // label9
+            // lbl_secao
             // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Arial Narrow", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.Location = new Point(407, 5);
-            label9.Name = "label9";
-            label9.Size = new Size(48, 20);
-            label9.TabIndex = 5;
-            label9.Text = "Seção:";
+            lbl_secao.AutoSize = true;
+            lbl_secao.Font = new Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_secao.Location = new Point(407, 5);
+            lbl_secao.Name = "lbl_secao";
+            lbl_secao.Size = new Size(54, 17);
+            lbl_secao.TabIndex = 5;
+            lbl_secao.Text = "Seção:";
             // 
-            // label5
+            // lbl_dig_zona
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Arial Narrow", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(353, 5);
-            label5.Name = "label5";
-            label5.Size = new Size(37, 20);
-            label5.TabIndex = 4;
-            label5.Text = "9999";
+            lbl_dig_zona.AutoSize = true;
+            lbl_dig_zona.Font = new Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_dig_zona.Location = new Point(361, 5);
+            lbl_dig_zona.Name = "lbl_dig_zona";
+            lbl_dig_zona.Size = new Size(40, 17);
+            lbl_dig_zona.TabIndex = 4;
+            lbl_dig_zona.Text = "9999";
             // 
-            // label4
+            // lbl_zona
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Arial Narrow", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(317, 5);
-            label4.Name = "label4";
-            label4.Size = new Size(41, 20);
-            label4.TabIndex = 3;
-            label4.Text = "Zona:";
+            lbl_zona.AutoSize = true;
+            lbl_zona.Font = new Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_zona.Location = new Point(317, 5);
+            lbl_zona.Name = "lbl_zona";
+            lbl_zona.Size = new Size(44, 17);
+            lbl_zona.TabIndex = 3;
+            lbl_zona.Text = "Zona:";
             // 
-            // label3
+            // lbl_minha_cidade
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Arial Narrow", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(215, 5);
-            label3.Name = "label3";
-            label3.Size = new Size(87, 20);
-            label3.TabIndex = 2;
-            label3.Text = "Minha Cidade";
+            lbl_minha_cidade.AutoSize = true;
+            lbl_minha_cidade.Font = new Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_minha_cidade.Location = new Point(215, 5);
+            lbl_minha_cidade.Name = "lbl_minha_cidade";
+            lbl_minha_cidade.Size = new Size(96, 17);
+            lbl_minha_cidade.TabIndex = 2;
+            lbl_minha_cidade.Text = "Minha Cidade";
             // 
-            // label2
+            // lbl_dig_municipio
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Arial Narrow", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(156, 5);
-            label2.Name = "label2";
-            label2.Size = new Size(44, 20);
-            label2.TabIndex = 1;
-            label2.Text = "99999";
+            lbl_dig_municipio.AutoSize = true;
+            lbl_dig_municipio.Font = new Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_dig_municipio.Location = new Point(156, 5);
+            lbl_dig_municipio.Name = "lbl_dig_municipio";
+            lbl_dig_municipio.Size = new Size(48, 17);
+            lbl_dig_municipio.TabIndex = 1;
+            lbl_dig_municipio.Text = "99999";
             // 
-            // label1
+            // lbl_Municipio
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Arial Narrow", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(89, 5);
-            label1.Name = "label1";
-            label1.Size = new Size(67, 20);
-            label1.TabIndex = 0;
-            label1.Text = "Município:";
+            lbl_Municipio.AutoSize = true;
+            lbl_Municipio.Font = new Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_Municipio.Location = new Point(89, 5);
+            lbl_Municipio.Name = "lbl_Municipio";
+            lbl_Municipio.Size = new Size(72, 17);
+            lbl_Municipio.TabIndex = 0;
+            lbl_Municipio.Text = "Município:";
             // 
             // lbl_votou
             // 
@@ -284,15 +319,15 @@
             lbl_aperte_a_tecla.TabIndex = 11;
             lbl_aperte_a_tecla.Text = "Aperte a tecla:";
             // 
-            // lblPartido
+            // lblPartidoCandidato
             // 
-            lblPartido.AutoSize = true;
-            lblPartido.Font = new Font("Arial", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            lblPartido.Location = new Point(82, 244);
-            lblPartido.Name = "lblPartido";
-            lblPartido.Size = new Size(78, 17);
-            lblPartido.TabIndex = 10;
-            lblPartido.Text = "Presidente";
+            lblPartidoCandidato.AutoSize = true;
+            lblPartidoCandidato.Font = new Font("Arial", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            lblPartidoCandidato.Location = new Point(82, 244);
+            lblPartidoCandidato.Name = "lblPartidoCandidato";
+            lblPartidoCandidato.Size = new Size(78, 17);
+            lblPartidoCandidato.TabIndex = 10;
+            lblPartidoCandidato.Text = "Presidente";
             // 
             // lbl_Partido
             // 
@@ -337,10 +372,10 @@
             // lbl_SeuVotoPara
             // 
             lbl_SeuVotoPara.AutoSize = true;
-            lbl_SeuVotoPara.Font = new Font("Arial Narrow", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            lbl_SeuVotoPara.Location = new Point(9, 32);
+            lbl_SeuVotoPara.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_SeuVotoPara.Location = new Point(12, 35);
             lbl_SeuVotoPara.Name = "lbl_SeuVotoPara";
-            lbl_SeuVotoPara.Size = new Size(134, 23);
+            lbl_SeuVotoPara.Size = new Size(166, 22);
             lbl_SeuVotoPara.TabIndex = 5;
             lbl_SeuVotoPara.Text = "SEU VOTO PARA";
             // 
@@ -354,6 +389,7 @@
             lbl_num5.Size = new Size(31, 34);
             lbl_num5.TabIndex = 4;
             lbl_num5.Text = "5";
+            lbl_num5.Validated += VerificaNumeroCandidato;
             // 
             // lbl_num4
             // 
@@ -365,6 +401,7 @@
             lbl_num4.Size = new Size(31, 34);
             lbl_num4.TabIndex = 3;
             lbl_num4.Text = "4";
+            lbl_num4.Validated += VerificaNumeroCandidato;
             // 
             // lbl_num3
             // 
@@ -376,6 +413,7 @@
             lbl_num3.Size = new Size(31, 34);
             lbl_num3.TabIndex = 2;
             lbl_num3.Text = "3";
+            lbl_num3.Validated += VerificaNumeroCandidato;
             // 
             // lbl_num2
             // 
@@ -387,6 +425,7 @@
             lbl_num2.Size = new Size(31, 34);
             lbl_num2.TabIndex = 1;
             lbl_num2.Text = "2";
+            lbl_num2.Validated += VerificaNumeroCandidato;
             // 
             // lbl_num1
             // 
@@ -398,208 +437,220 @@
             lbl_num1.Size = new Size(31, 34);
             lbl_num1.TabIndex = 0;
             lbl_num1.Text = "1";
+            lbl_num1.Validated += VerificaNumeroCandidato;
             // 
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(57, 52, 49);
             panel2.BorderStyle = BorderStyle.FixedSingle;
-            panel2.Controls.Add(button9);
-            panel2.Controls.Add(button7);
-            panel2.Controls.Add(button8);
-            panel2.Controls.Add(button6);
-            panel2.Controls.Add(button4);
-            panel2.Controls.Add(button5);
-            panel2.Controls.Add(button3);
-            panel2.Controls.Add(button14);
-            panel2.Controls.Add(button13);
-            panel2.Controls.Add(button12);
-            panel2.Controls.Add(button11);
-            panel2.Controls.Add(button2);
-            panel2.Controls.Add(button1);
+            panel2.Controls.Add(btn10);
+            panel2.Controls.Add(btn9);
+            panel2.Controls.Add(btn8);
+            panel2.Controls.Add(btn7);
+            panel2.Controls.Add(btn6);
+            panel2.Controls.Add(btn5);
+            panel2.Controls.Add(btn4);
+            panel2.Controls.Add(btn3);
+            panel2.Controls.Add(btn_Confirma);
+            panel2.Controls.Add(btn_Corrige);
+            panel2.Controls.Add(btn_Branco);
+            panel2.Controls.Add(btn2);
+            panel2.Controls.Add(btn1);
             panel2.Controls.Add(pictureBox1);
             panel2.Location = new Point(625, 23);
             panel2.Name = "panel2";
             panel2.Size = new Size(388, 454);
             panel2.TabIndex = 1;
             // 
-            // button9
+            // btn10
             // 
-            button9.BackColor = Color.FromArgb(48, 44, 45);
-            button9.FlatAppearance.BorderColor = Color.FromArgb(50, 45, 45);
-            button9.FlatStyle = FlatStyle.Flat;
-            button9.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            button9.ForeColor = Color.FromArgb(168, 161, 147);
-            button9.Location = new Point(149, 318);
-            button9.Name = "button9";
-            button9.Size = new Size(87, 43);
-            button9.TabIndex = 22;
-            button9.Text = "0";
-            button9.UseVisualStyleBackColor = false;
+            btn10.BackColor = Color.FromArgb(48, 44, 45);
+            btn10.FlatAppearance.BorderColor = Color.FromArgb(50, 45, 45);
+            btn10.FlatStyle = FlatStyle.Flat;
+            btn10.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            btn10.ForeColor = Color.FromArgb(168, 161, 147);
+            btn10.Location = new Point(149, 318);
+            btn10.Name = "btn10";
+            btn10.Size = new Size(87, 43);
+            btn10.TabIndex = 22;
+            btn10.Text = "0";
+            btn10.UseVisualStyleBackColor = false;
+            btn10.Click += Digita;
             // 
-            // button7
+            // btn9
             // 
-            button7.BackColor = Color.FromArgb(48, 44, 45);
-            button7.FlatAppearance.BorderColor = Color.FromArgb(50, 45, 45);
-            button7.FlatStyle = FlatStyle.Flat;
-            button7.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            button7.ForeColor = Color.FromArgb(168, 161, 147);
-            button7.Location = new Point(254, 259);
-            button7.Name = "button7";
-            button7.Size = new Size(87, 43);
-            button7.TabIndex = 21;
-            button7.Text = "9";
-            button7.UseVisualStyleBackColor = false;
+            btn9.BackColor = Color.FromArgb(48, 44, 45);
+            btn9.FlatAppearance.BorderColor = Color.FromArgb(50, 45, 45);
+            btn9.FlatStyle = FlatStyle.Flat;
+            btn9.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            btn9.ForeColor = Color.FromArgb(168, 161, 147);
+            btn9.Location = new Point(254, 259);
+            btn9.Name = "btn9";
+            btn9.Size = new Size(87, 43);
+            btn9.TabIndex = 21;
+            btn9.Text = "9";
+            btn9.UseVisualStyleBackColor = false;
+            btn9.Click += Digita;
             // 
-            // button8
+            // btn8
             // 
-            button8.BackColor = Color.FromArgb(48, 44, 45);
-            button8.FlatAppearance.BorderColor = Color.FromArgb(50, 45, 45);
-            button8.FlatStyle = FlatStyle.Flat;
-            button8.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            button8.ForeColor = Color.FromArgb(168, 161, 147);
-            button8.Location = new Point(149, 259);
-            button8.Name = "button8";
-            button8.Size = new Size(87, 43);
-            button8.TabIndex = 20;
-            button8.Text = "8";
-            button8.UseVisualStyleBackColor = false;
+            btn8.BackColor = Color.FromArgb(48, 44, 45);
+            btn8.FlatAppearance.BorderColor = Color.FromArgb(50, 45, 45);
+            btn8.FlatStyle = FlatStyle.Flat;
+            btn8.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            btn8.ForeColor = Color.FromArgb(168, 161, 147);
+            btn8.Location = new Point(149, 259);
+            btn8.Name = "btn8";
+            btn8.Size = new Size(87, 43);
+            btn8.TabIndex = 20;
+            btn8.Text = "8";
+            btn8.UseVisualStyleBackColor = false;
+            btn8.Click += Digita;
             // 
-            // button6
+            // btn7
             // 
-            button6.BackColor = Color.FromArgb(48, 44, 45);
-            button6.FlatAppearance.BorderColor = Color.FromArgb(50, 45, 45);
-            button6.FlatStyle = FlatStyle.Flat;
-            button6.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            button6.ForeColor = Color.FromArgb(168, 161, 147);
-            button6.Location = new Point(46, 259);
-            button6.Name = "button6";
-            button6.Size = new Size(87, 43);
-            button6.TabIndex = 19;
-            button6.Text = "7";
-            button6.UseVisualStyleBackColor = false;
+            btn7.BackColor = Color.FromArgb(48, 44, 45);
+            btn7.FlatAppearance.BorderColor = Color.FromArgb(50, 45, 45);
+            btn7.FlatStyle = FlatStyle.Flat;
+            btn7.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            btn7.ForeColor = Color.FromArgb(168, 161, 147);
+            btn7.Location = new Point(46, 259);
+            btn7.Name = "btn7";
+            btn7.Size = new Size(87, 43);
+            btn7.TabIndex = 19;
+            btn7.Text = "7";
+            btn7.UseVisualStyleBackColor = false;
+            btn7.Click += Digita;
             // 
-            // button4
+            // btn6
             // 
-            button4.BackColor = Color.FromArgb(48, 44, 45);
-            button4.FlatAppearance.BorderColor = Color.FromArgb(50, 45, 45);
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            button4.ForeColor = Color.FromArgb(168, 161, 147);
-            button4.Location = new Point(254, 199);
-            button4.Name = "button4";
-            button4.Size = new Size(87, 43);
-            button4.TabIndex = 18;
-            button4.Text = "6";
-            button4.UseVisualStyleBackColor = false;
+            btn6.BackColor = Color.FromArgb(48, 44, 45);
+            btn6.FlatAppearance.BorderColor = Color.FromArgb(50, 45, 45);
+            btn6.FlatStyle = FlatStyle.Flat;
+            btn6.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            btn6.ForeColor = Color.FromArgb(168, 161, 147);
+            btn6.Location = new Point(254, 199);
+            btn6.Name = "btn6";
+            btn6.Size = new Size(87, 43);
+            btn6.TabIndex = 18;
+            btn6.Text = "6";
+            btn6.UseVisualStyleBackColor = false;
+            btn6.Click += Digita;
             // 
-            // button5
+            // btn5
             // 
-            button5.BackColor = Color.FromArgb(48, 44, 45);
-            button5.FlatAppearance.BorderColor = Color.FromArgb(50, 45, 45);
-            button5.FlatStyle = FlatStyle.Flat;
-            button5.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            button5.ForeColor = Color.FromArgb(168, 161, 147);
-            button5.Location = new Point(149, 199);
-            button5.Name = "button5";
-            button5.Size = new Size(87, 43);
-            button5.TabIndex = 17;
-            button5.Text = "5";
-            button5.UseVisualStyleBackColor = false;
+            btn5.BackColor = Color.FromArgb(48, 44, 45);
+            btn5.FlatAppearance.BorderColor = Color.FromArgb(50, 45, 45);
+            btn5.FlatStyle = FlatStyle.Flat;
+            btn5.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            btn5.ForeColor = Color.FromArgb(168, 161, 147);
+            btn5.Location = new Point(149, 199);
+            btn5.Name = "btn5";
+            btn5.Size = new Size(87, 43);
+            btn5.TabIndex = 17;
+            btn5.Text = "5";
+            btn5.UseVisualStyleBackColor = false;
+            btn5.Click += Digita;
             // 
-            // button3
+            // btn4
             // 
-            button3.BackColor = Color.FromArgb(48, 44, 45);
-            button3.FlatAppearance.BorderColor = Color.FromArgb(50, 45, 45);
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.ForeColor = Color.FromArgb(168, 161, 147);
-            button3.Location = new Point(46, 199);
-            button3.Name = "button3";
-            button3.Size = new Size(87, 43);
-            button3.TabIndex = 16;
-            button3.Text = "4";
-            button3.UseVisualStyleBackColor = false;
+            btn4.BackColor = Color.FromArgb(48, 44, 45);
+            btn4.FlatAppearance.BorderColor = Color.FromArgb(50, 45, 45);
+            btn4.FlatStyle = FlatStyle.Flat;
+            btn4.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            btn4.ForeColor = Color.FromArgb(168, 161, 147);
+            btn4.Location = new Point(46, 199);
+            btn4.Name = "btn4";
+            btn4.Size = new Size(87, 43);
+            btn4.TabIndex = 16;
+            btn4.Text = "4";
+            btn4.UseVisualStyleBackColor = false;
+            btn4.Click += Digita;
             // 
-            // button14
+            // btn3
             // 
-            button14.BackColor = Color.FromArgb(48, 44, 45);
-            button14.FlatAppearance.BorderColor = Color.FromArgb(50, 45, 45);
-            button14.FlatStyle = FlatStyle.Flat;
-            button14.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            button14.ForeColor = Color.FromArgb(168, 161, 147);
-            button14.Location = new Point(254, 139);
-            button14.Name = "button14";
-            button14.Size = new Size(87, 43);
-            button14.TabIndex = 15;
-            button14.Text = "3";
-            button14.UseVisualStyleBackColor = false;
+            btn3.BackColor = Color.FromArgb(48, 44, 45);
+            btn3.FlatAppearance.BorderColor = Color.FromArgb(50, 45, 45);
+            btn3.FlatStyle = FlatStyle.Flat;
+            btn3.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            btn3.ForeColor = Color.FromArgb(168, 161, 147);
+            btn3.Location = new Point(254, 139);
+            btn3.Name = "btn3";
+            btn3.Size = new Size(87, 43);
+            btn3.TabIndex = 15;
+            btn3.Text = "3";
+            btn3.UseVisualStyleBackColor = false;
+            btn3.Click += Digita;
             // 
-            // button13
+            // btn_Confirma
             // 
-            button13.BackColor = Color.FromArgb(65, 188, 111);
-            button13.FlatAppearance.BorderSize = 0;
-            button13.FlatStyle = FlatStyle.Flat;
-            button13.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button13.Location = new Point(254, 383);
-            button13.Name = "button13";
-            button13.Size = new Size(111, 54);
-            button13.TabIndex = 14;
-            button13.Text = "CONFIRMA";
-            button13.UseVisualStyleBackColor = false;
+            btn_Confirma.BackColor = Color.FromArgb(65, 188, 111);
+            btn_Confirma.FlatAppearance.BorderSize = 0;
+            btn_Confirma.FlatStyle = FlatStyle.Flat;
+            btn_Confirma.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_Confirma.Location = new Point(254, 383);
+            btn_Confirma.Name = "btn_Confirma";
+            btn_Confirma.Size = new Size(111, 54);
+            btn_Confirma.TabIndex = 14;
+            btn_Confirma.Text = "CONFIRMA";
+            btn_Confirma.UseVisualStyleBackColor = false;
             // 
-            // button12
+            // btn_Corrige
             // 
-            button12.BackColor = Color.FromArgb(249, 175, 96);
-            button12.FlatAppearance.BorderSize = 0;
-            button12.FlatStyle = FlatStyle.Flat;
-            button12.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button12.Location = new Point(135, 389);
-            button12.Name = "button12";
-            button12.Size = new Size(100, 48);
-            button12.TabIndex = 13;
-            button12.Text = "CORRIGE";
-            button12.UseVisualStyleBackColor = false;
+            btn_Corrige.BackColor = Color.FromArgb(249, 175, 96);
+            btn_Corrige.FlatAppearance.BorderSize = 0;
+            btn_Corrige.FlatStyle = FlatStyle.Flat;
+            btn_Corrige.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_Corrige.Location = new Point(135, 389);
+            btn_Corrige.Name = "btn_Corrige";
+            btn_Corrige.Size = new Size(100, 48);
+            btn_Corrige.TabIndex = 13;
+            btn_Corrige.Text = "CORRIGE";
+            btn_Corrige.UseVisualStyleBackColor = false;
+            btn_Corrige.Click += btn_Corrige_Click;
             // 
-            // button11
+            // btn_Branco
             // 
-            button11.BackColor = Color.FromArgb(251, 250, 245);
-            button11.FlatAppearance.BorderSize = 0;
-            button11.FlatStyle = FlatStyle.Flat;
-            button11.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button11.Location = new Point(18, 389);
-            button11.Name = "button11";
-            button11.Size = new Size(100, 48);
-            button11.TabIndex = 12;
-            button11.Text = "BRANCO";
-            button11.UseVisualStyleBackColor = false;
+            btn_Branco.BackColor = Color.FromArgb(251, 250, 245);
+            btn_Branco.FlatAppearance.BorderSize = 0;
+            btn_Branco.FlatStyle = FlatStyle.Flat;
+            btn_Branco.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_Branco.Location = new Point(18, 389);
+            btn_Branco.Name = "btn_Branco";
+            btn_Branco.Size = new Size(100, 48);
+            btn_Branco.TabIndex = 12;
+            btn_Branco.Text = "BRANCO";
+            btn_Branco.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btn2
             // 
-            button2.BackColor = Color.FromArgb(48, 44, 45);
-            button2.FlatAppearance.BorderColor = Color.FromArgb(50, 45, 45);
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.ForeColor = Color.FromArgb(168, 161, 147);
-            button2.Location = new Point(149, 139);
-            button2.Name = "button2";
-            button2.Size = new Size(87, 43);
-            button2.TabIndex = 3;
-            button2.Text = "2";
-            button2.UseVisualStyleBackColor = false;
+            btn2.BackColor = Color.FromArgb(48, 44, 45);
+            btn2.FlatAppearance.BorderColor = Color.FromArgb(50, 45, 45);
+            btn2.FlatStyle = FlatStyle.Flat;
+            btn2.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            btn2.ForeColor = Color.FromArgb(168, 161, 147);
+            btn2.Location = new Point(149, 139);
+            btn2.Name = "btn2";
+            btn2.Size = new Size(87, 43);
+            btn2.TabIndex = 3;
+            btn2.Text = "2";
+            btn2.UseVisualStyleBackColor = false;
+            btn2.Click += Digita;
             // 
-            // button1
+            // btn1
             // 
-            button1.BackColor = Color.FromArgb(48, 44, 45);
-            button1.FlatAppearance.BorderColor = Color.FromArgb(50, 45, 45);
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.ForeColor = Color.FromArgb(168, 161, 147);
-            button1.Location = new Point(46, 139);
-            button1.Name = "button1";
-            button1.Size = new Size(87, 43);
-            button1.TabIndex = 2;
-            button1.Text = "1";
-            button1.UseVisualStyleBackColor = false;
+            btn1.BackColor = Color.FromArgb(48, 44, 45);
+            btn1.FlatAppearance.BorderColor = Color.FromArgb(50, 45, 45);
+            btn1.FlatStyle = FlatStyle.Flat;
+            btn1.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            btn1.ForeColor = Color.FromArgb(168, 161, 147);
+            btn1.Location = new Point(46, 139);
+            btn1.Name = "btn1";
+            btn1.Size = new Size(87, 43);
+            btn1.TabIndex = 2;
+            btn1.Text = "1";
+            btn1.UseVisualStyleBackColor = false;
+            btn1.Click += Digita;
             // 
             // pictureBox1
             // 
@@ -621,7 +672,7 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "frmUnaEletronica";
-            Text = "Form1";
+            Load += frmUnaEletronica_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel3.ResumeLayout(false);
@@ -634,29 +685,27 @@
 
         #endregion
 
-        private Panel panel1;
-        private Panel panel2;
-        private Button button2;
-        private Button button1;
+        private Button btn1;
+        private Button btn2;
+        private Button btn3;
+        private Button btn4;
         private PictureBox pictureBox1;
-        private Button button13;
-        private Button button12;
-        private Button button11;
-        private Button button9;
-        private Button button7;
-        private Button button8;
-        private Button button6;
-        private Button button4;
-        private Button button5;
-        private Button button3;
-        private Button button14;
+        private Button btn_Confirma;
+        private Button btn_Corrige;
+        private Button btn_Branco;
+        private Button btn10;
+        private Button btn9;
+        private Button btn8;
+        private Button btn7;
+        private Button btn6;
+        private Button btn5;
         private Label lbl_num1;
         private Label lbl_SeuVotoPara;
         private Label lbl_num5;
         private Label lbl_num4;
         private Label lbl_num3;
         private Label lbl_num2;
-        private Label lblPartido;
+        private Label lblPartidoCandidato;
         private Label lbl_Partido;
         private Label lblCandidato;
         private Label lbl_nome;
@@ -669,15 +718,20 @@
         private PictureBox picCandidato;
         private Label lbl_votou;
         private Label lbl_relogio;
-        private System.Windows.Forms.Timer timer1;
-        private Panel panel3;
-        private Label label11;
-        private Label label9;
-        private Label label5;
-        private Label label4;
-        private Label label3;
-        private Label label2;
-        private Label label1;
+        private Label lbl_dig_secao;
+        private Label lbl_secao;
+        private Label lbl_dig_zona;
+        private Label lbl_zona;
+        private Label lbl_minha_cidade;
+        private Label lbl_dig_municipio;
+        private Label lbl_Municipio;
         private Panel panelLinha;
+        private Label lbl_FIM;
+        private Label lbl_voto_nulo;
+        private Label lbl_numero_errado;
+        private Panel panel1;
+        private Panel panel2;
+        private Panel panel3;
+        private System.Windows.Forms.Timer timer1;
     }
 }
