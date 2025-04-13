@@ -7,7 +7,7 @@ Este projeto é um simulador de urna eletrônica desenvolvido com **C# (.NET Win
 - `UrnaEletronica/` - Código-fonte da aplicação
 - `VotosRegistrados/` - Pasta onde os votos são salvos com hash
 - `Sound/` - Sons da urna (ex: clique, confirmação)
-- `Database/` - Dump do banco de dados (`Urna_Eletronica.sql`)
+- `Banco/` - Dump do banco de dados (`Urna_Eletronica.sql`)
 
 ## ⚙️ Tecnologias Utilizadas
 
